@@ -125,6 +125,23 @@ public class Main {
 //    Plus $ 0.50 per call for next 50 calls.
 //    Plus $ 0.40 per call for any call beyond 200 calls.
 //    Use Switch Statement in the function.
+public double calculateBills(int calls) {
+    double bills = 0;
+    int index = calls / 50;
+    switch (index) {
+        case 0 : bills = 200;
+            break;
+        case 1 : bills = 200;
+            break;
+        case 2 : bills = 200 + (calls - 100) * 0.6;
+            break;
+        case 3 : bills = 230 + (calls - 150) * 0.5;
+            break;
+        default : bills = 255 + (calls - 200) * 0.4;
+            break;
+    }
+    return bills;
+}
 
 //  Question 7: Given two strings ransomNote and magazine, return true if ransomNote can be constructed from magazine and false otherwise.Each letter in magazine can only be used once in ransomNote.
 public static boolean canConstruct(String ransomNote, String magazine) {
