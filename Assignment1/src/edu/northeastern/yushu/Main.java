@@ -43,6 +43,7 @@ public class Main {
         //Question 6:
         System.out.println("==========================================");
         System.out.println("Question 6:");
+        System.out.println(calculateBills(222));
         //Question 7:
         System.out.println("==========================================");
         System.out.println("Question 7:");
@@ -125,7 +126,7 @@ public class Main {
 //    Plus $ 0.50 per call for next 50 calls.
 //    Plus $ 0.40 per call for any call beyond 200 calls.
 //    Use Switch Statement in the function.
-public double calculateBills(int calls) {
+public static double calculateBills(int calls) {
     double bills = 0;
     int index = calls / 50;
     switch (index) {
