@@ -168,6 +168,30 @@ public static boolean canConstruct(String ransomNote, String magazine) {
 //    C Average
 //    D Deficient
 //    F Failing
+char grade; // To hold grade
+
+    // Create a Scanner object to read input.
+    Scanner console = new Scanner(System.in);
+
+    // Get grade from the user.
+        System.out.print("Enter grade: ");
+    grade = console.next().charAt(0);
+
+    // Determine and display grade
+        switch (grade)
+    {
+        case 'A':
+            System.out.println("Excellent");
+            break;
+        case 'B':
+            System.out.println("Good");
+            break;
+        case 'C':
+            System.out.println("Average");
+            break;
+        case 'D':
+            System.out.println("Deficient");
+            break;
 //    Question 9: Write a program to create a book class. The Book class would have following private variables
 //    String name;
 //    int bookID;
