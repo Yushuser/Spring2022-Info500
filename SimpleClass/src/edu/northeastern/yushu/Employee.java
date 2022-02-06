@@ -5,6 +5,7 @@ public class Employee {
     private int employeeID;
     private String SSN;
     private int level;
+    private Department dept;
 
     public void setLevel(int level) {
         this.level = level;
@@ -13,13 +14,24 @@ public class Employee {
     public int getLevel() {
         return level;
     }
-
+    public void setName(String name) {
+        this.name = name;
+    }
     public String getName() {
         return name;
+    }
+    public void setId(int id){
+        this.employeeID=id;
     }
 
     public int getEmployeeID() {
         return employeeID;
+    }
+    public Employee( Employee employee){
+        Employee emp = new Employee();
+        this.name = employee.name;
+        this.employeeID = employee.employeeID;
+        this.dept = new Department("Sample Dept", 1);
     }
 
     public Employee(String name, int employeeID, String SSN, int level){
@@ -33,5 +45,11 @@ public class Employee {
         this.employeeID = -1;
         this.SSN = "ABCD";
         this.level = 67;
+        this.dept=null;
+    }
+    public void printEmployeeInfo(){
+        System.out.println("************");
+        System.out.println("Name = " + this.name);
+        System.out.println("ID = " + this.employeeID);
     }
 }
