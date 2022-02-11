@@ -1,47 +1,31 @@
 package edu.northeastern.yushu;
 
-public class Rectangle extends Shape{
+public class Rectangle {
     private  double width;
-    private  double height;
+    private  double length;
 
-    public Rectangle(double side) {
-        this.width=side;
-        this.height=side;
+    public Rectangle() {
     }
-
-
-    public Rectangle(double width,double height) {
+    public Rectangle(double width,double length) {
         this.width=width;
-        this.height=height;
+        this.length=length;
     }
+    public void computeArea() {
 
-    public Rectangle(String name, String color, double width, double height) {
-        super(name, color);
-        this.width = width;
-        this.height = height;
     }
+    public void computePerimeter() {
 
+    }
     public double getWidth() {
         return width;
     }
-
-    public double getHeight() {
-        return height;
-    }
-
     public void setWidth(double width) {
         this.width = width;
     }
-
-    public void setHeight(double height) {
-        this.height = height;
+    public double getLength() {
+        return length;
     }
-
-    public double getArea() {
-        return width*height;
-    }
-
-    public double getPerimeter() {
-        return (width+height)*2;
+    public void setLength(double length) {
+        this.length = length;
     }
 }
