@@ -1,20 +1,34 @@
 package edu.northeastern.yushu;
 
-public class Rectangle {
+public class Rectangle extends Shape {
     private  double width;
     private  double length;
 
     public Rectangle() {
+        super();
     }
     public Rectangle(double width, double length) {
+        super();
         this.width=width;
         this.length=length;
     }
-    public void computeArea() {
-
+    @Override
+    public double getPerimeter() {
+        return (length + width) * 2;
     }
-    public void computePerimeter() {
+    @Override
+    public double getArea() {
+        return length * width;
+    }
 
+    public void computePerimeter() {
+        System.out.println("=========================================");
+        System.out.println("Perimeter: " + getPerimeter());
+    }
+
+    public void computeArea() {
+        System.out.println("=========================================");
+        System.out.println("Area: " + getArea());
     }
     public double getWidth() {
         return width;
