@@ -8,12 +8,12 @@ public class Triangle extends Shape {
     public Triangle(int side) {
         super();
         this.base = side;
-        this.height = side * (int)Math.sqrt(3)/2;
+        this.height = side * (int)Math.sqrt(3) / 2;
     }
     public Triangle(String name, String color, int side) {
         super(name, color);
         this.base = side;
-        this.height = side * (int)Math.sqrt(3) / 2;
+        this.height = side * (int)Math.sqrt(3) / 2 ;
     }
     //3) Override the getArea() and getPerimeter() getter methods of Shape in triangle and Parallelogram to give desired output.
     @Override
