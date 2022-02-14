@@ -4,7 +4,7 @@ public class Shape {
     //Class: Shape
     //Fields: name, color, area, perimeter
     private String name;
-    private  String color;
+    private   String color;
     private  int area;
     private  int perimeter;
     //Constructors
