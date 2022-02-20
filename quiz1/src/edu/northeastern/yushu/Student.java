@@ -6,6 +6,6 @@ public class Student extends Person{
     }
 
     public void takeQuiz(String quiz) {
-        System.out.println("Student : "+getName() + " take quiz"+quiz);
+        System.out.println("Student : "+getName() + " take quiz "+quiz);
     }
 }
