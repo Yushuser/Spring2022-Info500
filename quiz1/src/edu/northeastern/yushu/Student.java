@@ -5,7 +5,7 @@ public class Student extends Person{
         super(name, id, age);
     }
 
-    public void takeQuiz() {
+    public void takeQuiz(String quiz) {
         System.out.println("Student : "+name + " take quiz");
     }
 }
