@@ -1,9 +1,9 @@
 package edu.northeastern.yushu;
 
 public class Person {
-     String name;
-    int id;
-    int age;
+    private String name;
+    private int id;
+    private int age;
 
     public Person(String name, int id, int age) {
         this.name = name;
