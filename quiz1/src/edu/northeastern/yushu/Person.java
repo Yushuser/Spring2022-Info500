@@ -1,7 +1,7 @@
 package edu.northeastern.yushu;
 
 public class Person {
-    String name;
+     String name;
     int id;
     int age;
 
