@@ -17,6 +17,11 @@ public class Main {
         Person p3 = new Person("Gigi",23);
         Person p4 = new Person("Blake",24);
         // Create one instance of SeattlePoliceDepartment
-        SeattlePoliceDepartment s1 = new SeattlePoliceDepartment();
+        SeattlePoliceDepartment s1 = new SeattlePoliceDepartment("Publisher", 45);
+        p1.subscribe(s1);
+        p2.subscribe(s1);
+        p3.unsubscribe(s1);
+        p4.unsubscribe(s1);
+        s1.NotifyCitizens(" Attention! ");
     }
 }
