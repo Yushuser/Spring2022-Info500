@@ -33,6 +33,6 @@ public class Person {
         System.out.println("Seattle Police Department : " + s1.getName());
         System.out.println("Person : " + this.getName() + "  " + getAge());
         System.out.println("Notification : " + s1.notification);
-        System.out.println("========================");
+        System.out.println("====================================================");
     }
 }
