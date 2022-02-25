@@ -22,16 +22,21 @@ public class Person {
     public void setAge(int age) {
         this.age = age;
     }
+
     // Create subscribe and unsubscribe functions which will take SeattlePoliceDepartment as argument.
+
     public void subscribe(SeattlePoliceDepartment s1) {
         if (!s1.person.contains(this)) {
             s1.person.add(this);
         }
     }
+
     public void unsubscribe(SeattlePoliceDepartment s1) {
         s1.person.remove(this);
     }
+
     // Create a method getNotification which will take SeattlePoliceDepartment as argument
+
     public void getNotification(SeattlePoliceDepartment s1) {
         System.out.println("Seattle Police Department : " + s1.getName());
         System.out.println("Person : " + this.getName() + "  " + getAge());

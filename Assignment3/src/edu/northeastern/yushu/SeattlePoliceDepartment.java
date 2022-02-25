@@ -6,11 +6,14 @@ import java.util.ArrayList;
 public class SeattlePoliceDepartment extends Person {
     ArrayList<Person> person;
     String notification;
+
     public SeattlePoliceDepartment(String name) {
         super(name);
         this.person = new ArrayList<>();
     }
+
     // Create a method called NotifyCitizens which will take a String as argument.
+
     public void NotifyCitizens(String notification) {
         this.notification = notification;
         for (Person person: person) {
