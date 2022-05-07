@@ -1,9 +1,10 @@
 package edu.northeastern.yushu;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Random;
 import java.util.Stack;
-
+// Yushu Wu
 public class Main {
 
     public static void main(String[] args) {
@@ -17,8 +18,8 @@ public class Main {
         System.out.println(lengthOfLongestSubstring("bbbbb"));
         System.out.println(lengthOfLongestSubstring("pwwkew"));
         System.out.println("================ Question 4 ================");
-        System.out.println(sumZero(5));
-        System.out.println(sumZero(3));
+        System.out.println(Arrays.toString(sumZero(5)));
+        System.out.println(Arrays.toString(sumZero(3)));
         System.out.println("================ Question 5 ================");
         int[] num1 = {3, 2, 1, 5, 6, 4};
         int k1 = 2;
@@ -68,15 +69,13 @@ public class Main {
         if (s.length() == 0) {
             return 0;
         }
-        // Use HashMap to keep char and its index map
         HashMap<Character, Integer> map = new HashMap<Character, Integer>();
-        int max = 0; // the longest substring
-        int left = 0; // pointer
+        int max = 0;
+        int left = 0;
         for (int i = 0; i < s.length(); i++) {
             if (map.containsKey(s.charAt(i))) {
                 left = Math.max(left, map.get(s.charAt(i)) + 1);
             }
-            // update
             map.put(s.charAt(i), i);
             max = Math.max(max, i - left + 1);
         }
@@ -99,35 +98,34 @@ public class Main {
         return quickSelect(nums, 0, nums.length - 1, nums.length - k);
     }
 
-    public static int quickSelect(int[] a, int left, int right, int index) {
-        int q = randomPartition(a, left, right);
+    public static int quickSelect(int[] num, int left, int right, int index) {
+        int q = randomPartition(num, left, right);
         if (q == index) {
-            return a[q];
+            return num[q];
         } else {
-            return q < index ? quickSelect(a, q + 1, right, index) : quickSelect(a, left, q - 1, index);
+            return q < index ? quickSelect(num, q + 1, right, index) : quickSelect(num, left, q - 1, index);
         }
     }
 
-    public static int randomPartition(int[] a, int l, int r) {
+    public static int randomPartition(int[] num, int l, int r) {
         int i = random.nextInt(r - l + 1) + l;
-        swap(a, i, r);
-        return partition(a, l, r);
+        swap(num, i, r);
+        return partition(num, l, r);
     }
 
-    public static int partition(int[] a, int l, int r) {
-        int x = a[r], i = l - 1;
+    public static int partition(int[] num, int l, int r) {
+        int k = num[r], i = l - 1;
         for (int j = l; j < r; ++j) {
-            if (a[j] <= x) {
-                swap(a, ++i, j);
+            if (num[j] <= k) {
+                swap(num, ++i, j);
             }
         }
-        swap(a, i + 1, r);
+        swap(num, i + 1, r);
         return i + 1;
     }
-
-    public static void swap(int[] a, int i, int j) {
-        int temp = a[i];
-        a[i] = a[j];
-        a[j] = temp;
+    public static void swap(int[] num, int i, int j) {
+        int temp = num[i];
+        num[i] = num[j];
+        num[j] = temp;
     }
 }
